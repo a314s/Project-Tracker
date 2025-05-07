@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="project-switcher">
+            <label for="project-select"><strong>Project:</strong></label>
+            <select id="project-select"></select>
+            <button id="new-project-btn" type="button">New Project</button>
+        </nav>
+        <header>
+            <h1>Project Tracker</h1>
+        </header>
+        <section class="add-feature">
+            <h2>Add Feature</h2>
+            <form id="feature-form">
+                <div class="feature-fields-col">
+                    <input type="text" id="feature-title" placeholder="Feature name" required>
+                    <input type="date" id="feature-date" required>
+                </div>
+                <div class="feature-notes-col">
+                    <textarea id="feature-notes" placeholder="Notes (optional)"></textarea>
+                    <button type="submit">Add Feature</button>
+                </div>
+            </form>
+        </section>
+        <section class="progress-section">
+            <h2>Progress</h2>
+            <div class="progress-bar-bg">
+                <div id="progress-roadmap" class="progress-roadmap"></div>
+            </div>
+            <span id="progress-text">0% Complete</span>
+        </section>
+        <section class="calendar-section">
+            <h2>Calendar</h2>
+            <div class="calendar-controls">
+                <button id="prev-month" type="button"><</button>
+                <span id="month-label"></span>
+                <button id="next-month" type="button">></button>
+            </div>
+            <div id="calendar"></div>
+        </section>
+        <section class="features-section">
+            <h2>Features</h2>
+            <ul id="features-list"></ul>
+        </section>
+    </div>
+    <footer>
+        <p>Track your software project features, deadlines, and progress visually.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
